@@ -1,3 +1,20 @@
+# Combat Sports Ranking
+
+This is the frontend application for Combat Sports Ranking (CSR). It will be used as the public entry point to the CSR system.
+
+The site itself is based on `nextJS v14`, hosted on `AWS`, and is styled with `styled-components`.
+
+To build the project simply have node >= `v18` installed on your machine and run the commands below
+
+```
+npm i
+npm run dev
+```
+
+localhost:3000 will be hosting the site.
+
+### Boiler plate next.js README below
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
