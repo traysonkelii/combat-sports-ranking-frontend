@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-combatsportsranking-dev-232613-authRole",
-      "UnauthRoleArn": "arn:aws:iam::908064770691:role/amplify-combatsportsranking-dev-232613-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::908064770691:role/amplify-combatsportsranking-dev-232613-authRole",
+      "AuthRoleName": "amplify-combatsports-dev-234327-authRole",
+      "UnauthRoleArn": "arn:aws:iam::908064770691:role/amplify-combatsports-dev-234327-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::908064770691:role/amplify-combatsports-dev-234327-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-combatsportsranking-dev-232613-deployment",
-      "UnauthRoleName": "amplify-combatsportsranking-dev-232613-unauthRole",
-      "StackName": "amplify-combatsportsranking-dev-232613",
-      "StackId": "arn:aws:cloudformation:us-east-1:908064770691:stack/amplify-combatsportsranking-dev-232613/05a9c3e0-9725-11ee-b0c3-0eb47dc4cfc3",
-      "AmplifyAppId": "d2cw7aof45ha30"
+      "DeploymentBucketName": "amplify-combatsports-dev-234327-deployment",
+      "UnauthRoleName": "amplify-combatsports-dev-234327-unauthRole",
+      "StackName": "amplify-combatsports-dev-234327",
+      "StackId": "arn:aws:cloudformation:us-east-1:908064770691:stack/amplify-combatsports-dev-234327/97f0f400-97f0-11ee-ad11-0ab46aa2da25",
+      "AmplifyAppId": "dmk0ox1t92xo8"
     },
     "categories": {
       "auth": {
-        "combatsportsrankingbddf6c1a": {
+        "combatsports28dfc4ce": {
           "userPoolId": "us-east-1_CtXx4eqHo",
           "userPoolName": "CombatSportsRankingCognitoPoolF55A8108-qRS2DHnXSe6W",
           "webClientId": "3cqfa5rb5ideg7g5kjjks1jski",

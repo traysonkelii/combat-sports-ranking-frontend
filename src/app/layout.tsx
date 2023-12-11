@@ -4,10 +4,6 @@ import { Inter } from "next/font/google";
 import GlobalStyles from "@/styles/Global.styled";
 
 import "@aws-amplify/ui-react/styles.css";
-import config from "../amplifyconfiguration.json";
-import { Amplify } from "aws-amplify";
-
-Amplify.configure(config);
 
 const inter = Inter({
   subsets: ["latin"],

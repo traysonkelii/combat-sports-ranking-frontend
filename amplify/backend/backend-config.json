@@ -1,6 +1,6 @@
 {
   "auth": {
-    "combatsportsrankingbddf6c1a": {
+    "combatsports28dfc4ce": {
       "customAuth": false,
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
@@ -9,35 +9,35 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_combatsportsrankingbddf6c1a_nativeClientId": {
+    "AMPLIFY_auth_combatsports28dfc4ce_nativeClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "combatsportsrankingbddf6c1a"
+          "resourceName": "combatsports28dfc4ce"
         }
       ]
     },
-    "AMPLIFY_auth_combatsportsrankingbddf6c1a_userPoolId": {
+    "AMPLIFY_auth_combatsports28dfc4ce_userPoolId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "combatsportsrankingbddf6c1a"
+          "resourceName": "combatsports28dfc4ce"
         }
       ]
     },
-    "AMPLIFY_auth_combatsportsrankingbddf6c1a_userPoolName": {
+    "AMPLIFY_auth_combatsports28dfc4ce_userPoolName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "combatsportsrankingbddf6c1a"
+          "resourceName": "combatsports28dfc4ce"
         }
       ]
     },
-    "AMPLIFY_auth_combatsportsrankingbddf6c1a_webClientId": {
+    "AMPLIFY_auth_combatsports28dfc4ce_webClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "combatsportsrankingbddf6c1a"
+          "resourceName": "combatsports28dfc4ce"
         }
       ]
     }
