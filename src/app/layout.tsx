@@ -3,6 +3,12 @@ import Navbar from "./components/Navbar/navbar";
 import { Inter } from "next/font/google";
 import GlobalStyles from "@/styles/Global.styled";
 
+import "@aws-amplify/ui-react/styles.css";
+import config from "../amplifyconfiguration.json";
+import { Amplify } from "aws-amplify";
+
+Amplify.configure(config);
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -13,11 +19,7 @@ export const metadata = {
   description: "Ranking platform for combat sport",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.className}>
       <body>
@@ -30,3 +32,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;
