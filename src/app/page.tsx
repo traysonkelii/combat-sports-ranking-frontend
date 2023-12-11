@@ -2,6 +2,7 @@
 import { Amplify } from "aws-amplify";
 import "@aws-amplify/ui-react/styles.css";
 import {
+  Authenticator,
   WithAuthenticatorProps,
   withAuthenticator,
 } from "@aws-amplify/ui-react";
@@ -97,7 +98,7 @@ const signUpFields = {
   },
 };
 
-export function Home({ signOut, user }: WithAuthenticatorProps) {
+export default function Home({ signOut, user }: WithAuthenticatorProps) {
   const [name, setName] = useState("");
   useEffect(() => {
     (async function anyNameFunction() {
@@ -117,14 +118,12 @@ export function Home({ signOut, user }: WithAuthenticatorProps) {
   }
 
   return (
-    <div style={{ textAlign: "center", marginTop: "10%" }}>
-      {name.length > 0 ? <h1>Hello {name}</h1> : <h1>Loading...</h1>}
-      <button onClick={signOut}>Sign out</button>{" "}
-      <button onClick={updateTodo}>Test</button>
-    </div>
+    <Authenticator formFields={signUpFields}>
+      <div style={{ textAlign: "center", marginTop: "10%" }}>
+        {name.length > 0 ? <h1>Hello {name}</h1> : <h1>Loading...</h1>}
+        <button onClick={signOut}>Sign out</button>{" "}
+        <button onClick={updateTodo}>Test</button>
+      </div>
+    </Authenticator>
   );
 }
-
-export default withAuthenticator(Home, {
-  signUpAttributes: ["given_name", "family_name", "birthdate"],
-});
