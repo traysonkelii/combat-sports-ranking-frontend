@@ -1,16 +1,17 @@
 import { post } from "aws-amplify/api";
 import { fetchUserAttributes } from "aws-amplify/auth";
 
-async function createHost() {
+async function createRole(role: string) {
   const userAttributes = await fetchUserAttributes();
   console.log("from Create host", userAttributes);
   try {
     const createHostBody = {
       userName: userAttributes.sub ?? "",
+      role,
     };
     const restOperation = post({
       apiName: "CombatSportsRanking",
-      path: "/api/v1/host",
+      path: "/api/v1/add-role",
       options: {
         body: createHostBody,
         headers: {
@@ -20,15 +21,19 @@ async function createHost() {
     });
     const { body } = await restOperation.response;
     const myJson = await body.json();
-    console.log("PUT call succeeded: ", myJson);
-    alert("You are now a host and can create tournaments");
+    console.log(`createHost ${myJson}`);
   } catch (err) {
     console.log("PUT call failed: ", err);
   }
 }
 
-const CreateHostButton = () => {
-  return <button onClick={createHost}>Create Host</button>;
+export interface CreateRoleButtonProps {
+  role: "FIGHTER" | "HOST" | "COACH" | "JUDGE";
+  displayText: string;
+}
+
+const CreateRoleButton = ({ role, displayText }: CreateRoleButtonProps) => {
+  return <button onClick={() => createRole(role)}>{displayText}</button>;
 };
 
-export default CreateHostButton;
+export default CreateRoleButton;

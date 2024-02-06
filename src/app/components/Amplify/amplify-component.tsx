@@ -1,4 +1,5 @@
 "use client";
+import { Authenticator } from "@aws-amplify/ui-react";
 import { Amplify } from "aws-amplify";
 import { fetchAuthSession } from "aws-amplify/auth";
 import { useEffect } from "react";
@@ -52,7 +53,7 @@ const AmplifyComponent = ({ children }: { children: React.ReactNode }) => {
     })();
   });
 
-  return <>{children}</>;
+  return <Authenticator.Provider>{children}</Authenticator.Provider>;
 };
 
 export default AmplifyComponent;

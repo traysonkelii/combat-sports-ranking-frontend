@@ -3,7 +3,7 @@ import "@aws-amplify/ui-react/styles.css";
 import { Authenticator } from "@aws-amplify/ui-react";
 import { fetchUserAttributes, signOut } from "aws-amplify/auth";
 import { useEffect, useState } from "react";
-import CreateHostButton from "./components/CreateHostButton/create-host-button";
+import CreateRoleButton from "./components/CreateRoleButton/create-role-button";
 
 const signUpFields = {
   signUp: {
@@ -49,7 +49,13 @@ export default function Home() {
     <Authenticator formFields={signUpFields}>
       <div style={{ textAlign: "center", marginTop: "10%" }}>
         {name.length > 0 ? <h1>Hello {name}</h1> : <h1>Loading...</h1>}
-        <button onClick={() => signOut()}>Sign out</button> <CreateHostButton />
+        <button onClick={() => signOut()}>Sign out</button>
+        <div style={{ display: "block", marginTop: "12px" }}>
+          <CreateRoleButton role="HOST" displayText="Create Host" />
+          <CreateRoleButton role="FIGHTER" displayText="Create Fighter" />
+          <CreateRoleButton role="COACH" displayText="Create Coach" />
+          <CreateRoleButton role="JUDGE" displayText="Create Judge" />
+        </div>
       </div>
     </Authenticator>
   );
