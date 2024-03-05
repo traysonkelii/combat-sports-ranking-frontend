@@ -4,6 +4,8 @@ import { Authenticator } from "@aws-amplify/ui-react";
 import { fetchUserAttributes, signOut } from "aws-amplify/auth";
 import { useEffect, useState } from "react";
 import CreateRoleButton from "./components/CreateRoleButton/create-role-button";
+import CreateTournamentButton from "./components/CreateTournamentButton/create-tournament-button";
+import GetUsersByRoleRoleButton from "./components/GetUsersByRoleButton/get-users-by-role-button";
 
 const signUpFields = {
   signUp: {
@@ -55,6 +57,14 @@ export default function Home() {
           <CreateRoleButton role="FIGHTER" displayText="Create Fighter" />
           <CreateRoleButton role="COACH" displayText="Create Coach" />
           <CreateRoleButton role="JUDGE" displayText="Create Judge" />
+          <CreateTournamentButton
+            tournament="nothing"
+            displayText="Create Tournament"
+          />
+          <GetUsersByRoleRoleButton role="COACH" displayText="Get Coach" />
+          <GetUsersByRoleRoleButton role="FIGHTER" displayText="Get Fighter" />
+          <GetUsersByRoleRoleButton role="JUDGE" displayText="Get Judge" />
+          <GetUsersByRoleRoleButton role="HOST" displayText="Get Host" />
         </div>
       </div>
     </Authenticator>

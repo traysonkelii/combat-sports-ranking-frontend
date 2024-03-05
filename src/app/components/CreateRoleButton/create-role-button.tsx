@@ -3,11 +3,13 @@ import { fetchUserAttributes } from "aws-amplify/auth";
 
 async function createRole(role: string) {
   const userAttributes = await fetchUserAttributes();
-  console.log("from Create host", userAttributes);
+  console.log("from create role", userAttributes);
   try {
     const createHostBody = {
       userName: userAttributes.sub ?? "",
       role,
+      firstName: userAttributes.given_name ?? "",
+      lastName: userAttributes.family_name ?? "",
     };
     const restOperation = post({
       apiName: "CombatSportsRanking",
