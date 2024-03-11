@@ -19,7 +19,6 @@ const existingConfig = Amplify.getConfig();
 
 const configureAmplify = async () => {
   const authToken = (await fetchAuthSession()).tokens?.idToken?.toString();
-  console.log("here is the auth: " + authToken);
   if (authToken) {
     Amplify.configure(existingConfig, {
       API: {
