@@ -1,10 +1,10 @@
 import StyledComponentsRegistry from "@/lib/registry";
-import Navbar from "./components/Navbar/navbar";
+import Navbar from "@/components/Navbar/navbar";
 import { Inter } from "next/font/google";
 import GlobalStyles from "@/styles/Global.styled";
 
 import "@aws-amplify/ui-react/styles.css";
-import AmplifyComponent from "./components/Amplify/amplify-component";
+import AmplifyComponent from "@/components/Amplify/amplify-component";
 import { Authenticator } from "@aws-amplify/ui-react";
 
 const inter = Inter({

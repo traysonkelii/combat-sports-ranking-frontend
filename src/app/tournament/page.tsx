@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import WithAuth from "@/app/components/hoc/WithAuth";
+import WithAuth from "@/components/hoc/WithAuth";
 
 const Tournament = () => {
   // const fetchMyData = async () => {

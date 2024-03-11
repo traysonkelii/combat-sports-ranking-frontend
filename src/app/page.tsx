@@ -3,9 +3,9 @@ import "@aws-amplify/ui-react/styles.css";
 import { Authenticator } from "@aws-amplify/ui-react";
 import { fetchUserAttributes, signOut } from "aws-amplify/auth";
 import { useEffect, useState } from "react";
-import CreateRoleButton from "./components/CreateRoleButton/create-role-button";
-import CreateTournamentButton from "./components/CreateTournamentButton/create-tournament-button";
-import GetUsersByRoleRoleButton from "./components/GetUsersByRoleButton/get-users-by-role-button";
+import CreateRoleButton from "@/components/CreateRoleButton/create-role-button";
+import CreateTournamentButton from "@/components/CreateTournamentButton/create-tournament-button";
+import GetUsersByRoleRoleButton from "@/components/GetUsersByRoleButton/get-users-by-role-button";
 
 const signUpFields = {
   signUp: {
