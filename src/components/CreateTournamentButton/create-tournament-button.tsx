@@ -3,7 +3,6 @@ import { fetchUserAttributes } from "aws-amplify/auth";
 
 async function createTournament(tournament: string) {
   const userAttributes = await fetchUserAttributes();
-  console.log("from create tournament", userAttributes);
   try {
     const createTournamentBody = {
       userName: userAttributes.sub ?? "",
@@ -21,7 +20,6 @@ async function createTournament(tournament: string) {
     });
     const { body } = await restOperation.response;
     const myJson = await body.json();
-    console.log(`createTournament ${myJson}`);
   } catch (err) {
     console.log("PUT call failed: ", err);
   }
