@@ -3,7 +3,6 @@ import { fetchUserAttributes } from "aws-amplify/auth";
 
 async function createRole(role: string) {
   const userAttributes = await fetchUserAttributes();
-  console.log("from create role", userAttributes);
   try {
     const createHostBody = {
       userName: userAttributes.sub ?? "",
@@ -23,7 +22,6 @@ async function createRole(role: string) {
     });
     const { body } = await restOperation.response;
     const myJson = await body.json();
-    console.log(`createHost ${myJson}`);
   } catch (err) {
     console.log("PUT call failed: ", err);
   }

@@ -1,33 +1,19 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React from "react";
-import WithAuth from "@/components/hoc/WithAuth";
 
 const Tournament = () => {
-  // const fetchMyData = async () => {
-  //   try {
-  //     const response = await fetch("/api/users/get-by-role", {
-  //       method: "POST",
-  //       headers: {
-  //         Accept: "application/json",
-  //         method: "POST",
-  //       },
-  //       body: JSON.stringify({ role: "COACH" }),
-  //     });
-  //     if (response) {
-  //       console.log(response);
-  //       const data = await response.json();
-  //       console.log(data);
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
+  const router = useRouter();
   return (
-    <WithAuth>
-      <div>Tournaments</div>
-      <button>test</button>
-    </WithAuth>
+    <>
+      <h1>Tournament Landing [PUBLIC]</h1>
+      <button type="button" onClick={() => router.push("tournament/create")}>
+        Create Tournament [AUTH]
+      </button>
+      <button type="button" onClick={() => router.push("tournament/register")}>
+        Register for Tournament [AUTH]
+      </button>
+    </>
   );
 };
 

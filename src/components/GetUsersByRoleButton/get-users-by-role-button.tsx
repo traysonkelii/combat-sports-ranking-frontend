@@ -3,7 +3,6 @@ import { fetchUserAttributes } from "aws-amplify/auth";
 
 async function getUsersByRole(role: string) {
   const userAttributes = await fetchUserAttributes();
-  console.log("from get user by role", userAttributes);
   try {
     const getUserByRoleBody = {
       role,
@@ -20,7 +19,6 @@ async function getUsersByRole(role: string) {
     });
     const { body } = await restOperation.response;
     const myJson = await body.json();
-    console.log(`getUserByRole ${myJson}`);
   } catch (err) {
     console.log("GET call failed: ", err);
   }
